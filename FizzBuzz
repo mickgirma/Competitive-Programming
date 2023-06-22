@@ -1,0 +1,32 @@
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+
+var fizzBuzz = function(n) {
+
+    const answer = [];
+    
+    for(i=1; i<=n; i++){
+
+        let String = "";
+
+        if(i%3 === 0){
+            String+="Fizz";
+        }
+
+        if(i%5 === 0){
+            String+="Buzz";
+        }
+
+        if(String === ""){
+            String+=i;
+        }
+
+        answer.push(String);
+    }
+
+    return answer;
+};
+
+console.log(fizzBuzz(3));
