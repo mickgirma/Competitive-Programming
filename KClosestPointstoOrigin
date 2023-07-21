@@ -1,0 +1,10 @@
+var kClosest = function(points, k) {
+  const distance = (val) => {
+    const [x, y] = val;
+    return Math.sqrt(x * x + y * y);
+  };
+
+  points.sort((a, b) => distance(a) - distance(b));
+
+  return points.slice(0, k);
+}
